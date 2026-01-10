@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+
+  <main id="scrolly">
+    <div id="graphic"></div>
+
+    <div id="steps">
+        <!-- Intro de la visualización -->
+        <section class="hero">
+            <h1 class="hero-title">Vivimos en tiempos de paz</h1>
+            <p class="hero-subtitle">Durante los últimos 70 años el mundo ha experimentado una reducción significativa en las muertes en conflictos armados.</p>
+
+            <p class="hero-subtitle">En rojo, estos son los países que <span class="hero-subtitle-fade-in">no</span> han experimentado muertes en conflictos armados o actos terroristas.</p>
+        </section>
+        <div class="container">
+        <p class="text-section">En 2024 se registraron <span id="text-highlight">61 </span>conflictos armados entre estados, la cifra más alta desde el final de la Segunda Guerra Mundial.</p>
+
+        <p class="text-section">Gran parte de los conflictos en el mundo ocurren lejos de los ojos del primer mundo. Aunque no aparezcan en los titulares, 
+          la guerra está presente en muchos lugares y afecta a millones de personas.</p>
+
+        <!-- Secciones de la visualización -->
+        <section class="step" data-step="1">
+            <p class="graph-title">Estas son las víctimas registradas desde 1989</p>
+            <div id="graphic">
+              <img src="./src/assets/images/silhouette-olive.png" alt="origen" class="chart-origin" />
+              <div id="bar-chart"></div>
+            </div>
+        </section>
+
+        <!-- Sección geopol -->
+        <p class="text-section"> El final de la Guerra Fría no marcó el fin de la violencia armada.
+          Desde finales de los años 80, los conflictos han continuado de forma persistente, 
+          con picos de violencia concentrados en eventos concretos.</p>
+
+        <p class="text-section"> El Genocidio de Ruanda fue tan devastador que provoca una distorsión de los datos. A partir de este punto se excluye de los datos. </p>
+
+        <p class="text-section"> Más allá de estos picos, encontramos otra tendencia: 
+          los conflictos cada vez implican con más frecuencia a al menos un estado </p>
+
+        <section class="step" data-step="2">
+          <p class="graph-title">Tipo de conflicto</p>
+          <div class="chart-row">
+            <div id="graphic">
+              <div id="donut-chart-90"></div>
+              <p class="chart-subtitle">1990s</p>
+            </div>
+            <div id="graphic">
+              <div id="donut-chart-10"></div>
+              <p class="chart-subtitle">2010s</p>
+            </div>
+          </div>
+        </section>
+
+        <p class="text-section"> El control territorial no siempre se traduce en mayor número de víctimas,
+          pero cuando los grupos armados dominan amplias zonas del país, la letalidad del conflicto tiende a aumentar para la población civil.</p>
+
+        <section class="step" data-step="2">
+          <p class="graph-title">Tasas de mortalidad según el porcentaje de territorio efectivamente controlado por el gobierno</p>
+          <div id="graphic">
+            <div id="stacked-bar-chart"></div>
+          </div>
+        </section>
+
+        <p class="text-section"> La mayor parte de los conflictos ocurren en países en regímenes autoritarios. 
+          Sin embargo, esta tendencia también está cambiando. La guerra cada vez afecta más a zonas consideradas seguras.</p>
+
+        <section class="step" data-step="4">
+            <p class="graph-title">Muertes en conflictos según el tipo de régimen político en 2024</p>
+            <div id="graphic">
+              <div id="regime-bar-chart"></div>
+              <img src="./src/assets/images/broken-legend.png"/>
+            </div>
+        </section>
+
+        <p class="text-section"> En Europa, el gasto militar ha aumentado significativamente en la última década, alcanzando niveles récord en 2023. 
+          Este incremento refleja las crecientes tensiones geopolíticas y la percepción de amenazas a la seguridad nacional en diversas regiones del mundo.</p>
+
+        <section class="step" data-step="5">
+            <p class="graph-title">Gasto militar por región respecto al PIB</p>
+            <div id="graphic">
+              <div id="military-spending-chart"></div>
+            </div>
+        </section>
+
+        <!-- Sección de mortalidades -->
+        <p class="text-section"> Detrás de cada cifra hay personas que no participan directamente en los combates. 
+          Todo ciudadano del territorio es afectado por la guerra</p>
+        <section class="step" data-step="2">
+            <p class="graph-title">Al menos dos de cada diez víctimas mortales son civiles</p>
+            <div class="image-container">
+              <img src="./src/assets/images/soldier-pictograph.png" alt="origen" class="soldier-img" />
+              <div class="overlay-text" style="top:75px; left:200px;">
+                Desconocido 21%
+              </div>
+              <div class="overlay-text" style="top:200px; left:200px;">
+                Civiles 21%
+              </div>
+              <div class="overlay-text" style="top:325px; left:200px;">
+                Combatientes 58%
+              </div>
+
+            </div>
+        </section>
+
+        <p class="text-section"> Además de las víctimas mortales, las personas afectadas por el conflicto también sufren consecuencias psicológicas, sociales y económicas duraderas.</p>
+
+        <p class="text-section"> En 2024, aproximadamente <span id="text-highlight">123.2 millones</span> de personas se vieron forzosamente desplazadas de su hogar.
+          Más de <span id="text-highlight">295 millones</span> de personas se encontraron en situación de inseguridad alimentaria aguda.
+        </p>
+
+        <p class="graph-title">En ese mismo año, los casos reportados de violencia sexual relacionada con conflictos armados aumentaron un <span id="text-highlight">87% </span></p>
+        <div class="flourish-embed flourish-pictogram" data-src="visualisation/27141258"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27141258/thumbnail" width="100%" alt="pictogram visualization" /></noscript></div>
+        
+        <P class="graph-title">Los conflictos armados continúan a día de hoy diezmando poblaciones enteras. 
+          La paz entre naciones es una responsabilidad compartida.</P>
+        <p class="graph-title">Y una ilusión frágil.</p>
+        <section class="empty-space"></section>
+        </div>
+
+    </div>
+  </main>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script> 
+  <script src="https://unpkg.com/topojson@3"></script>
+  <script type="module" src="./src/js/app.js"></script>
+</body>
+</html>
