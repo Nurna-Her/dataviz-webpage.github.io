@@ -43,8 +43,15 @@ html, body { /** Debug hero img **/
 }
 
 .empty-space {
-  height: 100vh; 
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../assets/images/gaza.avif") center / cover no-repeat;
+  height: 100vh;
+  width: 100vw;
+  justify-self: center;
+  margin-top: 15rem;
 }
+
 
 /** Hero Section **/
 .hero {
@@ -103,7 +110,7 @@ html, body { /** Debug hero img **/
 
 /** Text Sections **/
 .text-section {
-  margin: 2em 0;
+  margin-top: 4em;
   font-size: 1.2rem;
   text-align: center;
 }
@@ -125,6 +132,8 @@ html, body { /** Debug hero img **/
   color: var(--color-text-primary);
 }
 
+/** Images **/
+
 .image-container {
   margin-top: 3em;
   position: relative;     
@@ -143,12 +152,41 @@ html, body { /** Debug hero img **/
   position: absolute;
   color: white;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: normal;
   padding: 8px 12px;
   border-radius: 6px;
   white-space: nowrap;
 }
 
+.image-row {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* bloque derecho img */
+.image-side {
+  max-width: 200px;
+  text-align: left;
+}
+
+.side-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.side-text {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+.side-text-highlight {
+  font-size: 1.2rem;
+  color: var(--color-red-bright);
+  line-height: 1.4;
+}
 
 /** Charts **/
 .bar-chart {
@@ -171,8 +209,7 @@ html, body { /** Debug hero img **/
   display: flex;
   gap: 0px;             
   align-items: center;
-  align-self: center;
-  vertical-align: center;
+  justify-content: center;
   align-content: center;
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -232,12 +269,21 @@ para después
   margin-top: 30px;
 }
 
+.step #graphic-row { /* Arreglo donuts*/
+  position: relative;
+  width: 50vh;
+  min-height: 10vh;
+  margin: 20px;
+  overflow: visible;
+  margin-bottom: 200px;
+  margin-top: 30px;
+}
 
 .step #graphic .chart-origin {
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: -6px;
+  margin-bottom: -6px; /* Figura tumbada */
   position: relative;
   z-index: 3;
 
@@ -288,4 +334,33 @@ para después
   font-size: 11px;
   fill: var(--color-text-secondary);
   transform: translateX(-6px);
+}
+
+/* fuentes */
+.sources {
+  margin: 6rem auto 4rem;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+.sources summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+.sources details[open] summary {
+  margin-bottom: 1rem;
+}
+
+.sources ul {
+  list-style: none;
+}
+
+.sources a {
+  color: var(--color-red-bright);
+  text-decoration: none;
+}
+.sources a:hover {
+  text-decoration: underline;
 }

@@ -157,8 +157,8 @@ export function drawBarChart(selector, dataset) {
 
 // Grafico donut 
 export function drawDonutChart(selector, dataset) {
-  const width = 1200;
-  const height = 1000;
+  const width = 500;
+  const height = 400;
   const radius = Math.min(width, height) / 2 - 50;
 
   const svg = d3
@@ -287,49 +287,6 @@ export function drawDonutChart(selector, dataset) {
       .duration(400)
       .attr("opacity", 1);
   };
-}
-
-
-// dispersión
-export function drawDeathsVsTerritory(selector, dataset) {
-  const width = 700;
-  const height = 400;
-  const margin = { top: 40, right: 40, bottom: 60, left: 80 };
-
-  const data = dataset.filter(d =>
-    d.deaths > 0 &&
-    d.territory_state_control_pct >= 0
-  );
-
-  const svg = d3.select(selector)
-    .append("svg")
-    .attr("viewBox", [0, 0, width, height]);
-
-  const x = d3.scaleLinear()
-    .domain([0, 100])
-    .range([margin.left, width - margin.right]);
-
-  const y = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.deaths)])
-    .nice()
-    .range([height - margin.bottom, margin.top]);
-
-  svg.append("g")
-    .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x));
-
-  svg.append("g")
-    .attr("transform", `translate(${margin.left},0)`)
-    .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));
-
-  svg.selectAll("circle")
-    .data(data)
-    .join("circle")
-    .attr("cx", d => x(d.territory_state_control_pct))
-    .attr("cy", d => y(d.deaths))
-    .attr("r", 3)
-    .attr("fill", COLORS.red.bright)
-    .attr("opacity", 0.6);
 }
 
 
@@ -500,14 +457,18 @@ export function drawMilitarySpendingByRegion(selector, dataset) {
   svg.append("g")
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x).tickFormat(d3.format("d")))
-    .selectAll("text")
-    .attr("fill", "#ffffff");
+    .call(g => {
+      g.selectAll("path, line").attr("stroke", COLORS.text.secondary);
+      g.selectAll("text").attr("fill", COLORS.text.secondary);
+    });
 
   svg.append("g")
     .attr("transform", `translate(${margin.left},0)`)
     .call(d3.axisLeft(y).tickFormat(d => d + "%"))
-    .selectAll("text")
-    .attr("fill", "#ffffff");
+    .call(g => {
+      g.selectAll("path, line").attr("stroke", COLORS.text.secondary);
+      g.selectAll("text").attr("fill", COLORS.text.secondary);
+    });
 
   const line = d3.line()
     .defined(d => d.value != null)
@@ -569,14 +530,14 @@ export function drawMilitarySpendingByRegion(selector, dataset) {
 export function drawStackedBarChart(selector, dataset) {
   const width = 750;
   const height = 420;
-  const margin = { top: 40, right: 40, bottom: 40, left: 160 };
+  const margin = { top: 40, right: 40, bottom: 40, left: 90 };
 
   const conflictTypes = ["state_conflict_deaths", "nonstate_conflict_deaths", "onesided_conflict_deaths"];
 
   const CONFLICT_CONFIG = {
-    state_conflict_deaths: { label: "Estatales", color: COLORS.green.strong },
-    nonstate_conflict_deaths: { label: "No estatales", color: COLORS.red.strong },
-    onesided_conflict_deaths: { label: "Unidireccionales", color: COLORS.green.bright }
+    state_conflict_deaths: { label: "Estatales", color: COLORS.red.strong },
+    nonstate_conflict_deaths: { label: "No estatales", color: COLORS.green.bright },
+    onesided_conflict_deaths: { label: "Unidireccionales", color: COLORS.green.strong }
   };
 
   const TERRITORY_BINS = [
@@ -682,7 +643,6 @@ export function drawStackedBarChart(selector, dataset) {
 }
 
 
-
 /* -------------------------
    SCROLL
 -------------------------- */
@@ -743,7 +703,6 @@ async function init() {
 
   donutAnimateFn90 = drawDonutChart("#donut-chart-90", filteredData90);
   donutAnimateFn10 = drawDonutChart("#donut-chart-10", filteredData10);
-  scatterFn = drawDeathsVsTerritory("#scatter-plot", data);
   regimeFn = drawDeathsVsRegime("#regime-bar-chart", data);
   expenditureFn = drawMilitarySpendingByRegion("#military-spending-chart", data);
   stackedBarFn = drawStackedBarChart("#stacked-bar-chart", data);

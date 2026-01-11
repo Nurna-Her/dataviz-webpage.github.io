@@ -19,6 +19,8 @@
         <div class="container">
         <p class="text-section">En 2024 se registraron <span id="text-highlight">61 </span>conflictos armados entre estados, la cifra más alta desde el final de la Segunda Guerra Mundial.</p>
 
+        <p class="text-section">En los últimos 12 meses, más de <span id="text-highlight">240.000 </span>personas han muerto.</p>
+
         <p class="text-section">Gran parte de los conflictos en el mundo ocurren lejos de los ojos del primer mundo. Aunque no aparezcan en los titulares, 
           la guerra está presente en muchos lugares y afecta a millones de personas.</p>
 
@@ -42,13 +44,13 @@
           los conflictos cada vez implican con más frecuencia a al menos un estado </p>
 
         <section class="step" data-step="2">
-          <p class="graph-title">Tipo de conflicto</p>
+          <p class="graph-title">Tipos de conflicto por número de víctimas</p>
           <div class="chart-row">
-            <div id="graphic">
+            <div id="graphic-row">
               <div id="donut-chart-90"></div>
               <p class="chart-subtitle">1990s</p>
             </div>
-            <div id="graphic">
+            <div id="graphic-row">
               <div id="donut-chart-10"></div>
               <p class="chart-subtitle">2010s</p>
             </div>
@@ -56,12 +58,15 @@
         </section>
 
         <p class="text-section"> El control territorial no siempre se traduce en mayor número de víctimas,
-          pero cuando los grupos armados dominan amplias zonas del país, la letalidad del conflicto tiende a aumentar para la población civil.</p>
+          pero cuando los grupos armados dominan amplias zonas del país, los conflictos tienden a ser estatales. 
+          Este tipo de conflictos son los que se cobran más vidas.</p>
 
         <section class="step" data-step="2">
-          <p class="graph-title">Tasas de mortalidad según el porcentaje de territorio efectivamente controlado por el gobierno</p>
+          <p class="graph-title">Porcentaje de bajas por tipo de conflicto según el porcentaje de territorio efectivamente controlado por el gobierno</p>
           <div id="graphic">
             <div id="stacked-bar-chart"></div>
+            <p class="graph-title">Media de bajas según el tipo de conflicto</p>
+            <div class="flourish-embed flourish-pictogram" data-src="visualisation/27160310"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27160310/thumbnail" width="100%" alt="pictogram visualization" /></noscript></div>
           </div>
         </section>
 
@@ -69,7 +74,7 @@
           Sin embargo, esta tendencia también está cambiando. La guerra cada vez afecta más a zonas consideradas seguras.</p>
 
         <section class="step" data-step="4">
-            <p class="graph-title">Muertes en conflictos según el tipo de régimen político en 2024</p>
+            <p class="graph-title">Muertes en conflictos según el régimen político</p>
             <div id="graphic">
               <div id="regime-bar-chart"></div>
               <img src="./src/assets/images/broken-legend.png"/>
@@ -80,7 +85,7 @@
           Este incremento refleja las crecientes tensiones geopolíticas y la percepción de amenazas a la seguridad nacional en diversas regiones del mundo.</p>
 
         <section class="step" data-step="5">
-            <p class="graph-title">Gasto militar por región respecto al PIB</p>
+            <p class="graph-title">Gasto militar medio por región respecto al PIB</p>
             <div id="graphic">
               <div id="military-spending-chart"></div>
             </div>
@@ -89,8 +94,10 @@
         <!-- Sección de mortalidades -->
         <p class="text-section"> Detrás de cada cifra hay personas que no participan directamente en los combates. 
           Todo ciudadano del territorio es afectado por la guerra</p>
-        <section class="step" data-step="2">
-            <p class="graph-title">Al menos dos de cada diez víctimas mortales son civiles</p>
+
+        <p class="graph-title">Al menos dos de cada diez víctimas mortales son civiles</p>
+        <section class="step" data-step="6">
+          <div class="image-row">
             <div class="image-container">
               <img src="./src/assets/images/soldier-pictograph.png" alt="origen" class="soldier-img" />
               <div class="overlay-text" style="top:75px; left:200px;">
@@ -103,7 +110,26 @@
                 Combatientes 58%
               </div>
 
+            <div class="overlay-text" style="top:270px; left:865px; font-size: 18px;">
+              28.7%
             </div>
+            <div class="overlay-text" style="top:325px; left:865px; font-size: 18px;">
+              71.3%
+            </div>
+            </div>
+
+            <div class="image-side">
+            <p class="side-text">
+              Solo durante la invasión de Gaza, al menos 70.373 civiles han perdido la vida.
+            </p>
+            <p class="side-text-highlight">
+              Más de 20.000 eran niños.
+            </p>
+            <img src="./src/assets/images/child-pictograph.png"
+                alt="víctimas civiles"
+                class="side-img" />
+            </div>
+          </div>
         </section>
 
         <p class="text-section"> Además de las víctimas mortales, las personas afectadas por el conflicto también sufren consecuencias psicológicas, sociales y económicas duraderas.</p>
@@ -118,7 +144,43 @@
         <P class="graph-title">Los conflictos armados continúan a día de hoy diezmando poblaciones enteras. 
           La paz entre naciones es una responsabilidad compartida.</P>
         <p class="graph-title">Y una ilusión frágil.</p>
+
         <section class="empty-space"></section>
+
+
+        <section class="sources">
+          <details>
+            <summary>Fuentes utilizadas</summary>
+
+            <ul>
+              <li>
+                Uppsala Conflict Data Program (UCDP). 
+                <a href="https://ucdp.uu.se" target="_blank">https://ucdp.uu.se</a>
+              </li>
+              <li>
+                Our World in Data Org. 
+                <a href="https://ourworldindata.org/search?topics=Violence+and+War" target="_blank">https://ourworldindata.org</a>
+              </li>
+              <li>
+                Armed Conflict Location & Event Data (ACLED).
+                <a href="https://acleddata.com" target="_blank">https://acleddata.com</a>
+              </li>
+              <li>
+                UN Women Org.
+                <a href="https://www.unwomen.org/en/articles/facts-and-figures/facts-and-figures-women-peace-and-security" target="_blank">https://www.unwomen.org/</a>
+              </li>
+              <li>
+                Al Jazeera. 
+                <a href="https://www.aljazeera.com/news/2025/3/18/gaza-tracker" target="_blank">https://www.aljazeera.com</a>
+              </li>
+              <li>
+                The Guardian. 
+                <a href="https://www.theguardian.com/world/gallery/2025/jan/20/devastation-aerial-views-gaza-ceasefire-in-pictures" target="_blank">https://www.theguardian.com</a>
+              </li>
+            </ul>
+          </details>
+        </section>
+
         </div>
 
     </div>
