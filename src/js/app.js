@@ -206,15 +206,6 @@ export function drawDonutChart(selector, dataset) {
     .style("fill", COLORS.text.secondary)
     .style("opacity", 0);
 
-  centerText.append("tspan")
-    .attr("x", 0)
-    .text("Víctimas por");
-
-  centerText.append("tspan")
-    .attr("x", 0)
-    .attr("dy", "1.2em")
-    .text("tipo de conflicto");
-
   const polylines = svg.selectAll("polyline")
     .data(arcs)
     .join("polyline")

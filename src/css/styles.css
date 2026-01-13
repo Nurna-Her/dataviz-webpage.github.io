@@ -201,6 +201,22 @@ html, body { /** Debug hero img **/
   display: block;
 }
 
+/** hover **/
+.hover-text {
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+#graphic-row:hover .hover-text {
+  opacity: 1;
+}
+
 #regime-bar-chart {
   margin: 0 auto;
 }
@@ -275,7 +291,6 @@ para después
   min-height: 10vh;
   margin: 20px;
   overflow: visible;
-  margin-bottom: 200px;
   margin-top: 30px;
 }
 
