@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "CIENTÍFICO DE DATOS",
+    "subtitle": "Transformo datos en conocimiento accionable.",
+    "resume": "Currículum"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "works": "Proyectos",
+    "contact": "Contacto"
+  }
+}

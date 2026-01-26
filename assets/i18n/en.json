@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "DATA SCIENTIST",
+    "subtitle": "I turn data into actionable insights.",
+    "resume": "Resume"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "works": "Projects",
+    "contact": "Contact"
+  }
+}

@@ -1,203 +1,338 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="src/css/styles.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap"
+          rel="stylesheet">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <script src="./assets/js/index.js" defer></script>
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-touch-icon-57x57.png">
 </head>
 <body>
+<main>
+    <!-- Hero Header -->
+    <header id="heroHeader" class="hero-header">
+        <nav id="navBar" class="nav">
+            <div class="container">
+                <button type="button" id="hamburgerBtn" class="nav__hamburger-btn">
+                    <span class="nav__hamburger-top"></span>
+                    <span class="nav__hamburger-center"></span>
+                    <span class="nav__hamburger-bottom"></span>
+                </button>
+                <ul id="navList" class="nav__list">
+                    <li class="nav__list-item">
+                        <a class="nav__list-link active" href="#heroHeader">&lt;Home &sol;&gt;</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#aboutme">&lt;About Me &sol;&gt;</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#projects">&lt;Projects &sol;&gt;</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#experience">&lt;Experience &sol;&gt;</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a class="nav__list-link" href="#contact">&lt;Contact &sol;&gt;</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="header__container container">
+            <div class="header__left">
+                <span class="header__sup-text">Hello There! my name is Nuria and I am a</span>
+                <h1 class="header__title">
+                    <span class="header__title-1" data-role="DATA">DATA</span>
+                    <span class="header__title-2" data-role="SCIENTIST">SCIENTIST</span>
+                </h1>
+                <p class="header__msg">As a data scientist, my passion lies in descovering and exploiting the 
+                    information hidden inside the data.</p>
+                <a
+                    href="./assets/docs/CV_dummy.pdf" 
+                    class="header__resume"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Check out my resume
+                </a>
 
-  <main id="scrolly">
-    <div id="graphic"></div>
-
-    <div id="steps">
-        <!-- Intro de la visualización -->
-        <section class="hero">
-            <h1 class="hero-title">Vivimos en tiempos de paz</h1>
-            <p class="hero-subtitle">Durante los últimos 70 años el mundo ha experimentado una reducción significativa en las muertes en conflictos armados.</p>
-
-            <p class="hero-subtitle">En rojo, estos son los países que <span class="hero-subtitle-fade-in">no</span> han experimentado muertes en conflictos armados o actos terroristas.</p>
+            </div>
+            <!-- <div class="header__right">
+                <img src="./assets/images/header.png" alt="Header section illustration"/>
+            </div> -->
         </section>
-        <div class="container">
-        <p class="text-section">En 2024 se registraron <span id="text-highlight">61 </span>conflictos armados entre estados, la cifra más alta desde el final de la Segunda Guerra Mundial.</p>
+        <span class="header__bg"></span>
+    </header>
 
-        <p class="text-section">En los últimos 12 meses, más de <span id="text-highlight">240.000 </span>personas han muerto.</p>
+    <!-- About me -->
+    <section id="aboutme" class="section container">
+        <h2 class="section__title">About Me</h2>
+        <div class="aboutme">
+            <div class="aboutme__text">
+                <p>
+                    Hey there! My name is Nuria, and welcome to my personal portfolio. 
+                    I am a Computer Science graduate, currently finishing my Master's degree in Data Science, 
+                    where I continue to deepen my expertise in machine learning, data analysis, and advanced modeling techniques.
+                </p>
 
-        <p class="text-section">Gran parte de los conflictos en el mundo ocurren lejos de los ojos del primer mundo. Aunque no aparezcan en los titulares, 
-          la guerra está presente en muchos lugares y afecta a millones de personas.</p>
+                <p>
+                    I have several years of professional experience in software development, 
+                    specializing in AI-driven solutions and computer vision applications. 
+                    My work has focused on designing and building end-to-end systems that integrate AI to solve industrial automation problems.
+                </p>
 
-        <!-- Secciones de la visualización -->
-        <section class="step" data-step="1">
-            <p class="graph-title">Estas son las víctimas registradas desde 1989</p>
-            <div id="graphic">
-              <img src="./src/assets/images/silhouette-olive.png" alt="origen" class="chart-origin" />
-              <div id="bar-chart"></div>
+                <p>
+                    Through this portfolio, I aim to showcase some of the projects I work on outside of a professional setting
+                    —not only to demonstrate my skills, but also as a way to continuously learn and grow within my field.
+                </p>
+                <p>
+                    Beyond technology, I am an active and curious person. You can usually find me at the climbing gym, outdoors trying a new sport, or in the cinema. 
+                    I enjoy pursuing interests that fuel my creativity, strategic thinking, and appreciation for well-crafted experiences, both digital and physical.
+                </p>
+                <p>
+                    I am always interested in meaningful projects where innovation, data, and problem-solving come together, so feel free to get in touch!
+                </p>
             </div>
-        </section>
+            <span class="aboutme__illustration">
+                <img src="./assets/images/me.png" alt="Me"/>
+            </span>
+        </div>
+    </section>
 
-        <!-- Sección geopol -->
-        <p class="text-section"> El final de la Guerra Fría no marcó el fin de la violencia armada.
-          Desde finales de los años 80, los conflictos han continuado de forma persistente, 
-          con picos de violencia concentrados en eventos concretos.</p>
 
-        <p class="text-section"> El Genocidio de Ruanda fue tan devastador que provoca una distorsión de los datos. A partir de este punto se excluye de los datos. </p>
 
-        <p class="text-section"> Más allá de estos picos, encontramos otra tendencia: 
-          los conflictos cada vez implican con más frecuencia a al menos un estado </p>
+<div class="popup-overlay"></div>
+<div class="service-popup">
+    <button class="popup-close">×</button>
 
-        <section class="step" data-step="2">
-          <p class="graph-title">Tipos de conflicto por número de víctimas</p>
-          <div class="chart-row">
-            <div id="graphic-row">
-              <div id="donut-chart-90"></div>
-              <p class="chart-subtitle">1990s</p>
-              <span class="hover-text">
-                <p>Los conflictos estatales son aquellos que implican a varios estados.</p>
-                <p>Los conflictos no estatales son aquellos que involucran a grupos armados no gubernamentales.</p>
-                <p>Los conflictos unidireccionales son aquellos en los que un actor armado ataca a civiles sin oposición significativa.</p>
-              </span>
-            </div>
-            <div id="graphic-row">
-              <div id="donut-chart-10"></div>
-              <p class="chart-subtitle">2010s</p>
-              <span class="hover-text">
-                <p>Los conflictos estatales son aquellos que implican a varios estados.</p>
-                <p>Los conflictos no estatales son aquellos que involucran a grupos armados no gubernamentales.</p>
-                <p>Los conflictos unidireccionales son aquellos en los que un actor armado ataca a civiles sin oposición significativa.</p>
-              </span>
-            </div>
-          </div>
-        </section>
+    <h3 class="popup-title"></h3>
 
-        <p class="text-section"> El control territorial no siempre se traduce en mayor número de víctimas,
-          pero cuando los grupos armados dominan amplias zonas del país, los conflictos tienden a ser estatales. 
-          Este tipo de conflictos son los que se cobran más vidas.</p>
+    <div class="popup-body">
+        <p class="popup-content"></p>
+        <div class="popup-techs"></div>
+        <a href="#" target="_blank" class="popup-link">
+            View project →
+        </a>
+    </div>
+</div>
 
-        <section class="step" data-step="2">
-          <p class="graph-title">Porcentaje de bajas por tipo de conflicto según el porcentaje de territorio efectivamente controlado por el gobierno</p>
-          <div id="graphic">
-            <div id="stacked-bar-chart"></div>
-            <p class="graph-title">Media de bajas según el tipo de conflicto</p>
-            <div class="flourish-embed flourish-pictogram" data-src="visualisation/27160310"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27160310/thumbnail" width="100%" alt="pictogram visualization" /></noscript></div>
-          </div>
-        </section>
 
-        <p class="text-section"> La mayor parte de los conflictos ocurren en países en regímenes autoritarios. 
-          Sin embargo, esta tendencia también está cambiando. La guerra cada vez afecta más a zonas consideradas seguras.</p>
+    <!-- Projects -->
+    <section id="projects" class="section container">
+    <h2 class="section__title">My Projects</h2>
+    <div class="service-cards">
 
-        <section class="step" data-step="4">
-            <p class="graph-title">Muertes en conflictos según el régimen político</p>
-            <div id="graphic">
-              <div id="regime-bar-chart"></div>
-              <img src="./src/assets/images/broken-legend.png"/>
-            </div>
-        </section>
+        <!-- Housing scope -->
+        <article class="service-card__box"
+            data-title="Housing Scope"
+            data-content="The purpose of this project is the visual and interactive analysis of housing listings published on Idealista 
+            for a given city, in order to understand how they are distributed, how this distribution may change over time, 
+            and to identify opportunities for the user."
+            data-tech="Python, Selenium, PowerBI"
+            data-link="https://github.com/Nurna-Her/Housing-Scope">
 
-        <p class="text-section"> En Europa, el gasto militar ha aumentado significativamente en la última década, alcanzando niveles récord en 2023. 
-          Este incremento refleja las crecientes tensiones geopolíticas y la percepción de amenazas a la seguridad nacional en diversas regiones del mundo.</p>
-
-        <section class="step" data-step="5">
-            <p class="graph-title">Gasto militar medio por región respecto al PIB</p>
-            <div id="graphic">
-              <div id="military-spending-chart"></div>
-            </div>
-        </section>
-
-        <!-- Sección de mortalidades -->
-        <p class="text-section"> Detrás de cada cifra hay personas que no participan directamente en los combates. 
-          Todo ciudadano del territorio es afectado por la guerra</p>
-
-        <p class="graph-title">Al menos dos de cada diez víctimas mortales son civiles</p>
-        <section class="step" data-step="6">
-          <div class="image-row">
-            <div class="image-container">
-              <img src="./src/assets/images/soldier-pictograph.png" alt="origen" class="soldier-img" />
-              <div class="overlay-text" style="top:75px; left:200px;">
-                Desconocido 21%
-              </div>
-              <div class="overlay-text" style="top:200px; left:200px;">
-                Civiles 21%
-              </div>
-              <div class="overlay-text" style="top:325px; left:200px;">
-                Combatientes 58%
-              </div>
-
-            <div class="overlay-text" style="top:270px; left:865px; font-size: 18px;">
-              28.7%
-            </div>
-            <div class="overlay-text" style="top:325px; left:865px; font-size: 18px;">
-              71.3%
-            </div>
-            </div>
-
-            <div class="image-side">
-            <p class="side-text">
-              Solo durante la invasión de Gaza, al menos 70.373 civiles han perdido la vida.
+            <h3 class="service-card__title">Housing Scope</h3>
+            <p class="service-card__msg">
+                A web scraping and visualization project about housing data.
             </p>
-            <p class="side-text-highlight">
-              Más de 20.000 eran niños.
+            <span class="work__badges">
+                    <span class="work__badge">Web Scraping</span>
+                    <span class="work__badge">Data Visualization</span>
+                </span>
+            <span class="service-card__bg" style="background-image:url('./assets/images/scraping.png')"></span>
+        </article>
+
+        <!-- Churn Prediction -->
+        <article class="service-card__box"
+            data-title="Churn Prediction"
+            data-content="A churn prediction ML project focused on data preprocessing and model optimization.
+                The project involves exploratory data analysis, model selection and 
+                hyperparameter tuning to achieve the best performance. Model deployment is also lightly covered."
+            data-tech="EDA, Data processing, Predictive modeling"
+            data-link="https://github.com/Nurna-Her/cell2cell-churn-prediction">
+
+            <h3 class="service-card__title">Churn Prediction</h3>
+            <p class="service-card__msg">A churn prediction ML project focused on data preprocessing and model optimization.
+
             </p>
-            <img src="./src/assets/images/child-pictograph.png"
-                alt="víctimas civiles"
-                class="side-img" />
-            </div>
-          </div>
-        </section>
+            <span class="work__badges">
+                <span class="work__badge">Python</span>
+                <span class="work__badge">Data Analytics</span>
+                <span class="work__badge">Machine Learning</span>
+            </span>
+            <span class="service-card__bg" style="background-image:url('./assets/images/tree.jpg')"></span>
+        </article>
 
-        <p class="text-section"> Además de las víctimas mortales, las personas afectadas por el conflicto también sufren consecuencias psicológicas, sociales y económicas duraderas.</p>
+        <!-- Contaminant detection -->
+        <article class="service-card__box"
+            data-title="Automatic contaminant detection model"
+            data-content="As part of my bachelor's thesis, 
+                I developed an image segmentation model capable of detecting leftover foam in plastic parts, 
+                which rendered them unrecyclable. The project involved data simulation, image processing and labeling,
+                model training and optimization, and its deployment in a real industrial setting.
+                Unfortunately, due to confidentiality agreements, I cannot share the code or data used in this project."
+            data-tech="Python, C, OpenCV, TensorFlow"
+            data-link="https://github.com/Nurna-Her/">
+            <h3 class="service-card__title">Contaminant detection</h3>
+            <p class="service-card__msg">Development of an image segmentation model for contaminant detection in plastic parts.
+            </p>
+            <span class="work__badges">
+                    <span class="work__badge">Computer Vision</span>
+                    <span class="work__badge">Machine Learning</span>
+                    <span class="work__badge">Image Processing</span>
+            </span>
+            <span class="service-card__bg" style="background-image:url('./assets/images/segmentation.jpg')"></span>
+        </article>
 
-        <p class="text-section"> En 2024, aproximadamente <span id="text-highlight">123.2 millones</span> de personas se vieron forzosamente desplazadas de su hogar.
-          Más de <span id="text-highlight">295 millones</span> de personas se encontraron en situación de inseguridad alimentaria aguda.
-        </p>
+        <!-- Miniprojects -->
+        <article class="service-card__box"
+            data-title="Applied Data Science"
+            data-content="Check out some of my mini projects developed as part of my master's degree, 
+                        covering all of the steps in the data science pipeline. "
+            data-tech="Python, R, Other"
+            data-link="https://github.com/Nurna-Her/DataScience-Masters">
+            <h3 class="service-card__title">Miniprojects</h3>
+            <p class="service-card__msg">Collection of data science projects developed as part of my master's degree. 
+            </p>
+            <span class="work__badges">
+                    <span class="work__badge">Data Science</span>
+                    <span class="work__badge">Data Visualization</span>
+                    <span class="work__badge">Machine Learning</span>
+            </span>
+            <span class="service-card__bg" style="background-image:url('./assets/images/datascience.jpg')"></span>
+        </article>
+    </div>
 
-        <p class="graph-title">En ese mismo año, los casos reportados de violencia sexual relacionada con conflictos armados aumentaron un <span id="text-highlight">87% </span></p>
-        <div class="flourish-embed flourish-pictogram" data-src="visualisation/27141258"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27141258/thumbnail" width="100%" alt="pictogram visualization" /></noscript></div>
-        
-        <P class="graph-title">Los conflictos armados continúan a día de hoy diezmando poblaciones enteras. 
-          La paz entre naciones es una responsabilidad compartida.</P>
-        <p class="graph-title">Y una ilusión frágil.</p>
+    <!-- Current Projects -->
+    <div class="service-cards-highlighted">
+        <span class="service-cards-highlighted-text">What I'm currently working on →  </span>
 
-        <section class="empty-space"></section>
+        <article class="service-card__box service-card__box--highlighted"
+            data-title="Sector return prediction"
+            data-content="This project is part of my master's thesis, 
+                which focuses on developing a model to predict sector returns for a  based on historical data.
+                The project involves data collection, preprocessing, feature engineering, model training and evaluation."
+            data-tech="Python, R, Jupyter, Other"
+            data-link="https://github.com/Nurna-Her/">
+            <h3 class="service-card__title">Return prediction</h3>
+            <p class="service-card__msg">
+                Development of a model to predict sector returns based on historical data.
+            </p>
+            <span class="work__badges">
+                    <span class="work__badge">Data Analytics</span>
+                    <span class="work__badge">Machine Learning</span>
+                    <span class="work__badge">Financial AI</span>
+            </span>
+            <span class="service-card__bg" style="background-image:url('./assets/images/candles.jpg')"></span>
+        </article>
+
+        <article class="service-card__box service-card__box--highlighted"
+            data-title="Movie recommendation system"
+            data-content="A letterboxd based movie recommendation system for group movie nights built mostly for fun.
+                The system uses collaborative filtering and content-based filtering to recommend movies based on user preferences and past ratings."
+            data-tech="Python, Javascript, Other"
+            data-link="https://github.com/Nurna-Her/">
+            <h3 class="service-card__title">CoinCine</h3>
+            <p class="service-card__msg">
+                A gimmicky, letterboxd-based movie recommendation system for group movie nights. 
+            </p>
+            <span class="work__badges">
+                    <span class="work__badge">Web Scraping</span>
+                    <span class="work__badge">Machine Learning</span>
+                    <span class="work__badge">SW Development</span>
+            </span>
+            <span class="service-card__bg" style="background-image:url('./assets/images/letterboxd.png')"></span>
+        </article>
+    </div>
+</section>
 
 
-        <section class="sources">
-          <details>
-            <summary>Fuentes utilizadas</summary>
 
-            <ul>
-              <li>
-                Uppsala Conflict Data Program (UCDP). 
-                <a href="https://ucdp.uu.se" target="_blank">https://ucdp.uu.se</a>
-              </li>
-              <li>
-                Our World in Data Org. 
-                <a href="https://ourworldindata.org/search?topics=Violence+and+War" target="_blank">https://ourworldindata.org</a>
-              </li>
-              <li>
-                Armed Conflict Location & Event Data (ACLED).
-                <a href="https://acleddata.com" target="_blank">https://acleddata.com</a>
-              </li>
-              <li>
-                UN Women Org.
-                <a href="https://www.unwomen.org/en/articles/facts-and-figures/facts-and-figures-women-peace-and-security" target="_blank">https://www.unwomen.org/</a>
-              </li>
-              <li>
-                Al Jazeera. 
-                <a href="https://www.aljazeera.com/news/2025/3/18/gaza-tracker" target="_blank">https://www.aljazeera.com</a>
-              </li>
-              <li>
-                The Guardian. 
-                <a href="https://www.theguardian.com/world/gallery/2025/jan/20/devastation-aerial-views-gaza-ceasefire-in-pictures" target="_blank">https://www.theguardian.com</a>
-              </li>
-            </ul>
-          </details>
-        </section>
+    <!-- Education & Experience -->
+    <section id="experience"  class="career container">
 
+    <div class="career__column career__education">
+        <h2 class="section__title">Education</h2>
+
+        <div class="career__item">
+            <h3>Bachelor's Degree in Computer Science</h3>
+            <span class="career__meta">Polytechnic University of Valencia · 2019 – 2023</span>
+            <p>With a specialization in computation.</p>
         </div>
 
+        <div class="career__item">
+            <h3>Master's Degree in Data Science</h3>
+            <span class="career__meta">Open University of Catalonia · 2024 – 2026</span>
+            <p>Focused on machine learning, statistics and data analysis.</p>
+        </div>
     </div>
-  </main>
 
-  <script src="https://d3js.org/d3.v7.min.js"></script> 
-  <script src="https://unpkg.com/topojson@3"></script>
-  <script type="module" src="./src/js/app.js"></script>
+    <div class="career__column career__experience">
+        <h2 class="section__title">Experience</h2>
+
+        <div class="career__item">
+            <h3>Machine Learning Internship</h3>
+            <span class="career__meta">ITI · 2022 – 2023</span>
+            <p>Developed ML models for image segmentation and classification. Developed AdHoc algorithms for analysis automation.</p>
+        </div>
+
+        <div class="career__item">
+            <h3>Computer Vision Engineer</h3>
+            <span class="career__meta">ITI · 2023 – 2025</span>
+            <p>Developed ML models for prediction and automation.</p>
+        </div>
+    </div>
+
+    </section>
+
+
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+        <h2 class="section__title">Let's Connect!</h2>
+        <div class="contact">
+            <form class="contact__form">
+                <div class="contact__field-wrapper">
+                    <label for="contactNameTxt">Name:</label>
+                    <input id="contactNameTxt" type="text" placeholder="What's your name?"/>
+                </div>
+                <div class="contact__field-wrapper">
+                    <label for="contactNameTxt">Email or Phone number:</label>
+                    <input id="contactNameTxt" type="text" placeholder="How can I contact you?"/>
+                </div>
+                <div class="contact__field-wrapper">
+                    <label for="contactDescriptionTxt">Message:</label>
+                    <textarea id="contactDescriptionTxt" placeholder="What's new?"></textarea>
+                </div>
+
+                <button type="submit" class="contact__submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Bye Bye!</a>
+    </footer>
+</main>
 </body>
 </html>
