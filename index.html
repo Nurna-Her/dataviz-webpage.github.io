@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +68,7 @@
                 <p class="header__msg">As a data scientist, my passion lies in descovering and exploiting the 
                     information hidden inside the data.</p>
                 <a
-                    href="./assets/docs/CV_dummy.pdf" 
+                    href="./assets/docs/CV_EN.pdf" 
                     class="header__resume"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -106,10 +107,10 @@
                 </p>
                 <p>
                     Beyond technology, I am an active and curious person. You can usually find me at the climbing gym, outdoors trying a new sport, or in the cinema. 
-                    I enjoy pursuing interests that fuel my creativity, strategic thinking, and appreciation for well-crafted experiences, both digital and physical.
+                    I always strive to maintain a diverse set of interests that keep me inspired and motivated.
                 </p>
                 <p>
-                    I am always interested in meaningful projects where innovation, data, and problem-solving come together, so feel free to get in touch!
+                    I am always up for a challenge, so feel free to get in touch!
                 </p>
             </div>
             <span class="aboutme__illustration">
@@ -224,13 +225,13 @@
 
     <!-- Current Projects -->
     <div class="service-cards-highlighted">
-        <span class="service-cards-highlighted-text">What I'm currently working on →  </span>
+        <span class="service-cards-highlighted-text">What I'm currently working on ->  </span>
 
         <article class="service-card__box service-card__box--highlighted"
             data-title="Sector return prediction"
             data-content="This project is part of my master's thesis, 
-                which focuses on developing a model to predict sector returns for a  based on historical data.
-                The project involves data collection, preprocessing, feature engineering, model training and evaluation."
+                which focuses on developing a model to predict sector returns for a rotational wallet strategy.
+                The project involves data collection, preprocessing, feature engineering, and model training and evaluation."
             data-tech="Python, R, Jupyter, Other"
             data-link="https://github.com/Nurna-Her/">
             <h3 class="service-card__title">Return prediction</h3>
@@ -247,7 +248,7 @@
 
         <article class="service-card__box service-card__box--highlighted"
             data-title="Movie recommendation system"
-            data-content="A letterboxd based movie recommendation system for group movie nights built mostly for fun.
+            data-content="A letterboxd based movie recommendation system for group movie nights which I am developing mostly for fun.
                 The system uses collaborative filtering and content-based filtering to recommend movies based on user preferences and past ratings."
             data-tech="Python, Javascript, Other"
             data-link="https://github.com/Nurna-Her/">
@@ -309,29 +310,49 @@
     <!-- Contact -->
     <section id="contact" class="section container">
         <h2 class="section__title">Let's Connect!</h2>
-        <div class="contact">
-            <form class="contact__form">
-                <div class="contact__field-wrapper">
-                    <label for="contactNameTxt">Name:</label>
-                    <input id="contactNameTxt" type="text" placeholder="What's your name?"/>
-                </div>
-                <div class="contact__field-wrapper">
-                    <label for="contactNameTxt">Email or Phone number:</label>
-                    <input id="contactNameTxt" type="text" placeholder="How can I contact you?"/>
-                </div>
-                <div class="contact__field-wrapper">
-                    <label for="contactDescriptionTxt">Message:</label>
-                    <textarea id="contactDescriptionTxt" placeholder="What's new?"></textarea>
-                </div>
 
-                <button type="submit" class="contact__submit-btn">Submit</button>
-            </form>
+        <div class="contact-links">
+            <p class="contact-text">
+                Feel free to contact me through LinkedIn:
+            </p>
+
+            <a
+                href="https://www.linkedin.com/in/nuriaheredia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link"
+            >
+                <img
+                    src="./assets/images/linkedin_logo.webp"
+                    alt="LinkedIn icon"
+                    class="contact-icon"
+                />
+                linkedin.com/in/nuriaheredia
+            </a>
+
+            <p class="contact-text">
+                Or directly to my email at:
+            </p>
+
+            <a
+                href="mailto:nuriaheredia01@gmail.com"
+                class="contact-link"
+            >
+                <img
+                    src="./assets/images/mail_logo.png"
+                    alt="Email icon"
+                    class="contact-icon"
+                />
+                    nuriaheredia01&#64;gmail&#46;com
+
+            </a>
         </div>
-    </section>
 
+    </section>
+    <section class="empty-space"></section>
     <!-- Footer -->
     <footer class="footer">
-        Bye Bye!</a>
+        Bye Bye!
     </footer>
 </main>
 </body>

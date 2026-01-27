@@ -47,7 +47,9 @@ window.addEventListener('resize', ()=>{
 
 // As the user scrolls, the active link should change based on the section currently displayed on the screen.
 window.addEventListener('scroll', ()=>{
-  const sections = document.querySelectorAll('#heroHeader, #services, #works, #contact');
+  const sections = document.querySelectorAll(
+    '#heroHeader, #aboutme, #projects, #experience, #contact'
+  );
 
   // Loop through sections and check if they are visible
   sections.forEach((section) => {
@@ -58,7 +60,6 @@ window.addEventListener('scroll', ()=>{
       const LINK = NAV_LINKS.filter(link => {
         return link.href.includes('#'+ID);
       })[0];
-      console.log(LINK);
       currentActiveLink.classList.remove(ACTIVE_LINK_CLASS);
       LINK.classList.add(ACTIVE_LINK_CLASS);
       currentActiveLink = LINK;
@@ -100,7 +101,7 @@ NAV_LINKS.forEach(link => {
 new SweetScroll({
   trigger: '.nav__list-link',
   easing: 'easeOutQuint',
-  offset: NAV_BAR.getBoundingClientRect().height - 80
+  offset: () => NAV_BAR.getBoundingClientRect().height
 });
 
 
